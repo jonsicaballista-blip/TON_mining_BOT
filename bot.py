@@ -53,10 +53,10 @@ mineria_usuarios = {}
 
 def minar(user_id):
 if user_id not in mineria_usuarios:
-        mineria_usuarios[user_id] = 0
-    recompensa = random.randint(1, 8)
-    mineria_usuarios[user_id] += recompensa
-    return recompensa, mineria_usuarios[user_id]
+mineria_usuarios[user_id] = 0
+recompensa = random.randint(1, 8)
+mineria_usuarios[user_id] += recompensa
+return recompensa, mineria_usuarios[user_id]
 
 # ===========================
 #  JUEGO NOTCOIN
