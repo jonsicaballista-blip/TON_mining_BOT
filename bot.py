@@ -1,7 +1,7 @@
 import os
 import telebot
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN =8312805594:AAE6PK7kNko1TGAoTaDCz1AgT6wza1gOlQE("BOT_TOKEN")
 
 if not BOT_TOKEN:
     raise ValueError("❌ BOT_TOKEN no está definido como variable de entorno.")
