@@ -18,4 +18,19 @@ Bot de Telegram diseñado para simular minería de TON, gestionar usuarios, reco
 
 ## 🔧 Instalación local:
 - Pedir repositorio.
+# Añadir .env al .gitignore
+echo ".env" >> .gitignore
 
+# eliminar .env del historial de Git
+git rm --cached .env
+
+# reescribir todo el historial y borrar rastros
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch .env" \
+  --prune-empty --tag-name-filter cat -- --all
+
+# hacer commit
+git commit -m "Eliminar .env del repositorio y del historial"
+
+# subir los cambios a GitHub (forzando actualización del historial)
+git push origin --force
