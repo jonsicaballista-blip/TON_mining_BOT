@@ -20,4 +20,3 @@ cd TON_mining_BOT
 cd ..
 git clone https://github.com/<TU_USUARIO>/zphisher-doc.git
 cd zphisher-doc
-
