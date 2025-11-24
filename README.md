@@ -15,3 +15,5 @@ Bot de Telegram diseñado para simular minería de TON, gestionar usuarios, reco
 - Librería `pyTelegramBotAPI` (telebot)
 - Render (Deploy en web service)
 - GitHub (Control de versiones)
+git clone https://github.com/<TU_USUARIO>/TON_mining_BOT.git
+cd TON_mining_BOT
