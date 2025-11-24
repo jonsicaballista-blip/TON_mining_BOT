@@ -17,3 +17,7 @@ Bot de Telegram diseñado para simular minería de TON, gestionar usuarios, reco
 - GitHub (Control de versiones)
 git clone https://github.com/<TU_USUARIO>/TON_mining_BOT.git
 cd TON_mining_BOT
+cd ..
+git clone https://github.com/<TU_USUARIO>/zphisher-doc.git
+cd zphisher-doc
+
