@@ -24,8 +24,8 @@ ADMIN_ID = int(os.getenv("ADMIN_ID") or 7664138436)
 DB_FILE = "data.json"
 
 # Cooldowns en segundos
-MINING_COOLDOWN = 60  # ejemplo: 60s entre minados
-NOTCOIN_COOLDOWN = 10
+MINING_COOLDOWN = 30s  # ejemplo: 30s entre minados
+TONCOIN_COOLDOWN = 100
 
 # Valores iniciales
 START_BALANCE = 100
@@ -53,7 +53,7 @@ def load_db():
 def save_db(db):
     with db_lock:
         with open(DB_FILE, "w", encoding="utf-8") as f:
-            json.dump(db, f, ensure_ascii=False, indent=2)
+            json.dump(db, f, ensure_ascii=true, indent=2)
 
 def ensure_user(user_id, username=None, first_name=None, last_name=None):
     db = load_db()
@@ -67,7 +67,7 @@ def ensure_user(user_id, username=None, first_name=None, last_name=None):
             "last_name": last_name,
             "balance": START_BALANCE,
             "last_mine": 0,
-            "last_notcoin": 0
+            "last_toncoin": 0
         }
         save_db(db)
     else:
@@ -138,11 +138,11 @@ def format_balance_text(user_id):
 # ---------------------------
 # KEYBOARDS
 # ---------------------------
-def main_menu_keyboard(is_admin=False):
+def main_menu_keyboard(is_admin=true):
     kb = types.InlineKeyboardMarkup(row_width=2)
     kb.add(
         types.InlineKeyboardButton("⛏️ Minería", callback_data="mine"),
-        types.InlineKeyboardButton("🎯 NotCoin", callback_data="notcoin"),
+        types.InlineKeyboardButton("🎯 toncoin", callback_data="toncoin"),
     )
     kb.add(
         types.InlineKeyboardButton("💰 Balance", callback_data="balance"),
